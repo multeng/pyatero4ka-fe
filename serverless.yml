@@ -1,10 +1,11 @@
-service: node-in-aws-web
+service: pyatero4ka
 
 frameworkVersion: '2'
 
 provider:
   name: aws
   runtime: nodejs12.x
+  region: eu-west-1
   # setup profile for AWS CLI.
   # profile: node-aws
 
@@ -17,7 +18,7 @@ plugins:
 
 custom:
   client:
-    bucketName: node-in-aws-web-bucket
+    bucketName: pyatero4ka
     distributionFolder: build
   s3BucketName: ${self:custom.client.bucketName}
 
